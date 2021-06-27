@@ -18,18 +18,22 @@ export default function Photos() {
     getPhotos();
   }, []);
   return (
-    <section class="container">
-      <div class="card">
-        <div class="card-image">
-          <img
-            src="https://apod.nasa.gov/apod/image/0903/deimos_hirise_big.jpg"
-            alt="Martian Moon Deimos from MRO"
-          />
-        </div>
-        <div class="card-title">
-          <h3>Placeholder Text</h3>
-        </div>
-      </div>
+    <section className="container">
+      {photos.map((photo) => {
+        return (
+          <div className="card">
+            <div className="card-image">
+              <img
+                src="https://apod.nasa.gov/apod/image/0703/3772-84mcnaught_druckmuller720.jpg"
+                alt="Three Galaxies and a Comet"
+              />
+            </div>
+            <div className="card-title">
+              <h3>Three Galaxies and a Comet</h3>
+            </div>
+          </div>
+        );
+      })}
     </section>
   );
 }
