@@ -18,11 +18,18 @@ export default function Photos() {
     getPhotos();
   }, []);
   return (
-    <div>
-      <ul>
-        <li>Item One</li>
-        <li>Item Two</li>
-      </ul>
-    </div>
+    <section class="container">
+      <div class="card">
+        <div class="card-image">
+          <img
+            src="https://apod.nasa.gov/apod/image/0903/deimos_hirise_big.jpg"
+            alt="Martian Moon Deimos from MRO"
+          />
+        </div>
+        <div class="card-title">
+          <h3>Placeholder Text</h3>
+        </div>
+      </div>
+    </section>
   );
 }

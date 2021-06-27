@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
@@ -17,7 +16,7 @@ function App() {
         <NavHeader />
       </header>
       <main>
-        <Photos />
+        <Route path="/" exact component={Photos} />
         <PhotoDetails />
       </main>
     </>
