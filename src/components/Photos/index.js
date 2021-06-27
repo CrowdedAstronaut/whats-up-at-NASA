@@ -3,18 +3,17 @@ import { useState, useEffect } from "react";
 export default function Photos() {
   const [photos, setPhotos] = useState([]);
   const getPhotos = async () => {
-    const apiEndPoint = `https://audubon-api.herokuapp.com/api/birds`;
+    const apiEndPoint = `https://api.nasa.gov/planetary/apod?count=25&api_key=wmnjZhcttUv5tC9H3cXKGM6y2vUApSgZUaXXJFww`;
+    // const apiKey = `?api_key=wmnjZhcttUv5tC9H3cXKGM6y2vUApSgZUaXXJFww`;
     try {
-      const response = await fetch(apiEndPoint); //<-- the url as a string
+      const response = await fetch(apiEndPoint);
       const data = await response.json(); // Wait for the response and convert it to json
       setPhotos(data);
     } catch (err) {
-      // Catch and log any errors to the console
       console.error(err);
     }
   };
 
-  // call that function in your useEffect
   useEffect(() => {
     getPhotos();
   }, []);

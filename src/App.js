@@ -16,8 +16,10 @@ function App() {
         <About />
         <NavHeader />
       </header>
-      <Photos />
-      <PhotoDetails />
+      <main>
+        <Photos />
+        <PhotoDetails />
+      </main>
     </>
   );
 }
