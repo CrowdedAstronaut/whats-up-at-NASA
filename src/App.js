@@ -3,17 +3,22 @@ import { Route, Link } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
 import NavHeader from "./components/NavHeader";
-import ListItems from "./components/ListItems";
-import ItemDetails from "./components/ItemDetails";
+import Photos from "./components/Photos";
+import PhotoDetails from "./components/PhotoDetails";
 
 function App() {
   return (
-    <div className="App">
-      <About />
-      <NavHeader />
-      <ListItems />
-      <ItemDetails />
-    </div>
+    <>
+      <header>
+        <h1>
+          <a href="/">What's up at NASA?</a>
+        </h1>
+        <About />
+        <NavHeader />
+      </header>
+      <Photos />
+      <PhotoDetails />
+    </>
   );
 }
 

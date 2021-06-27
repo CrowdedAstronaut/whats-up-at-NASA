@@ -1,4 +1,7 @@
-export default function ListItems() {
+import { useState } from "react";
+
+export default function Photos() {
+  const [photos, setPhotos] = useState([]);
   return (
     <div>
       <ul>
