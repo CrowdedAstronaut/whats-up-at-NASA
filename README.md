@@ -1,3 +1,15 @@
+# Description:
+
+This is a React Application that queries the NASA Photo of the Day API and returns 25 results to the user. If the user clicks on a photo, the app will return details about that photo from the NASA API. (ADD A SCREENSHOT OF THE FINISHED PRODUCT)
+
+# Technologies Used:
+
+This application was built using HTML5, CSS3, JS ES6, AJAX, and REACT
+
+# Contribution Guidelines:
+
+This section should offer guidance on where and how users can contribute to your code, identify bugs, and propose improvements.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
