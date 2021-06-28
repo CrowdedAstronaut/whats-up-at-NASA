@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Photos() {
   const NASA_SEARCH = {
@@ -28,14 +29,16 @@ export default function Photos() {
     <section className="container">
       {photos.map((photo) => {
         return (
-          <div key={photo.title} className="card">
-            <div className="card-image">
-              <img src={photo.url} alt="Placeholder Text" />
+          <Link to={`/details/${photo.title}`} key={photo.title}>
+            <div className="card">
+              <div className="card-image">
+                <img src={photo.url} alt="Placeholder Text" />
+              </div>
+              <div className="card-title">
+                <h3>{photo.title}</h3>
+              </div>
             </div>
-            <div className="card-title">
-              <h3>{photo.title}</h3>
-            </div>
-          </div>
+          </Link>
         );
       })}
     </section>
