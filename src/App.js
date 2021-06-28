@@ -17,7 +17,7 @@ function App() {
       </header>
       <main>
         <Route path="/" exact component={Photos} />
-        {/* <Route path='/details' component={PhotoDetails} /> */}
+        <Route path="/details" component={PhotoDetails} />
       </main>
     </>
   );
