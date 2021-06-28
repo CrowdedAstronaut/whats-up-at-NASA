@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function Photos() {
   const NASA_SEARCH = {
-    // process.env.NASA_API_KEY
-    key: "wmnjZhcttUv5tC9H3cXKGM6y2vUApSgZUaXXJFww",
+    key: process.env.REACT_APP_NASA_API_KEY,
     url: "https://api.nasa.gov/planetary/apod",
     count: "?count=25",
     api: "&api_key=",
