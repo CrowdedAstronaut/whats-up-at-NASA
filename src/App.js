@@ -12,12 +12,12 @@ function App() {
         <h1>
           <a href="/">What's up at NASA?</a>
         </h1>
-        <About />
         <NavHeader />
       </header>
       <main>
         <Route path="/" exact component={Photos} />
         <Route path="/details/" component={PhotoDetails} />
+        <Link to="/about" component={About} />
       </main>
     </>
   );
