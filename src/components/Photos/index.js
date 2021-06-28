@@ -33,7 +33,7 @@ export default function Photos() {
               <img src={photo.url} alt="Placeholder Text" />
             </div>
             <div className="card-title">
-              <h3>Three Galaxies and a Comet</h3>
+              <h3>{photo.title}</h3>
             </div>
           </div>
         );

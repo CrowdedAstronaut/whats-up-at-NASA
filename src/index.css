@@ -112,3 +112,8 @@ header a {
   margin: 1rem 0;
   padding: 1rem;
 }
+
+img {
+  max-width: 100%;
+  max-height: fit-content;
+}

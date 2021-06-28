@@ -20,7 +20,7 @@ export default function PhotoDetails(props) {
 
   return (
     <div className="details-container">
-      <img src={photo.image} alt="" />
+      <img src={photo.url} alt="" />
       <div className="details">
         <h2>{photo.title}</h2>
         <h4>{photo.explanation}</h4>
