@@ -1,14 +1,20 @@
 import { useState, useEffect } from "react";
 
 export default function PhotoDetails(props) {
-  const [photo, setPhotoDetails] = useState({});
+  const [photo, setPhotoDetails] = useState([]);
 
   const getPhotoDetails = async () => {
-    const apiEndPoint = `https://api.nasa.gov/planetary/apod/${props.match.params.id}`;
+    const NASA_SEARCH = {
+      key: process.env.REACT_APP_NASA_API_KEY,
+      url: "../../data/data.json", //currently url is directed at local JSON data
+      api: "&api_key=",
+    };
+    const detailsEndPoint = `${NASA_SEARCH.url}${props.match.params.title}`; //Trying to access params of local JSON data before making real API call
     try {
       // fetch
-      const response = await fetch(apiEndPoint);
+      const response = await fetch(detailsEndPoint);
       const data = await response.json();
+      console.log(data);
       setPhotoDetails(data);
     } catch (err) {
       console.log(err);
@@ -18,11 +24,12 @@ export default function PhotoDetails(props) {
     getPhotoDetails();
   }, []);
 
+  console.log(photo);
   return (
     <div className="details-container">
       <img src="https://apod.nasa.gov/apod/image/9805/ring_hst.jpg" alt="" />
       <div className="details">
-        <h3>M57: The Ring Nebula</h3>
+        <h3> Title </h3>
         <p>
           "It looked like a ring on the sky. Hundreds of years ago astronomers
           noticed a nebula with a most unusual shape. Now known as M57 or NGC
@@ -45,12 +52,12 @@ export default function PhotoDetails(props) {
   );
 }
 
-{
-  /* <img src={photo.url} alt="" /> */
-}
-// <div className="details">
+/* <img src={photo.url} alt="" /> */
+
+//   /* <div className="details">
 // <h3>{photo.title}</h3>
 // <p>{photo.explanation}</p>
 // <a href={photo.url} target="_blank" rel="noopener noreferrer">
 //   Read More
-// </a>
+// </a> */
+// }

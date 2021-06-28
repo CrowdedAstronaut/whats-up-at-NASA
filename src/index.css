@@ -41,6 +41,10 @@ header a {
   padding: 1rem;
 }
 
+img {
+  max-width: 80%;
+}
+
 .card {
   border: 1px solid lightgray;
   border-radius: 1rem;
@@ -111,9 +115,4 @@ header a {
   display: inline-block;
   margin: 1rem 0;
   padding: 1rem;
-}
-
-img {
-  max-width: 100%;
-  max-height: fit-content;
 }
