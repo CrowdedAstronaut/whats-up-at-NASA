@@ -38,7 +38,7 @@ export default function PhotoDetails(props) {
           Sun-like star's existence. As one of the brightest planetary nebula on
           the sky, the Ring Nebula can be seen with a small telescope in the
           constellation of Lyra. The Ring Nebula lies about 4000 light years
-          away, and is roug..."
+          away, and is rough....."
         </p>
         <a
           href="https://apod.nasa.gov/apod/image/9805/ring_hst.jpg"
