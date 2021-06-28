@@ -1,9 +1,17 @@
 import { useState, useEffect } from "react";
 
 export default function Photos() {
+  const NASA_SEARCH = {
+    // process.env.NASA_API_KEY
+    key: "wmnjZhcttUv5tC9H3cXKGM6y2vUApSgZUaXXJFww",
+    url: "https://api.nasa.gov/planetary/apod",
+    count: "?count=25",
+    api: "&api_key=",
+  };
   const [photos, setPhotos] = useState([]);
   const getPhotos = async () => {
-    const apiEndPoint = `https://api.nasa.gov/planetary/apod?count=25&api_key=wmnjZhcttUv5tC9H3cXKGM6y2vUApSgZUaXXJFww`;
+    const apiEndPoint = `${NASA_SEARCH.url}${NASA_SEARCH.count}${NASA_SEARCH.api}${NASA_SEARCH.key}`;
+    console.log(apiEndPoint);
     // const apiKey = `?api_key=wmnjZhcttUv5tC9H3cXKGM6y2vUApSgZUaXXJFww`;
     try {
       const response = await fetch(apiEndPoint);
@@ -21,12 +29,9 @@ export default function Photos() {
     <section className="container">
       {photos.map((photo) => {
         return (
-          <div className="card">
+          <div key={photo.title} className="card">
             <div className="card-image">
-              <img
-                src="https://apod.nasa.gov/apod/image/0703/3772-84mcnaught_druckmuller720.jpg"
-                alt="Three Galaxies and a Comet"
-              />
+              <img src={photo.url} alt="Placeholder Text" />
             </div>
             <div className="card-title">
               <h3>Three Galaxies and a Comet</h3>
