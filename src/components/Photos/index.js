@@ -29,13 +29,14 @@ export default function Photos() {
     <section className="container">
       {photos.map((photo) => {
         return (
-          <Link to={`/details/${photo.title}`} key={photo.title}>
+          <Link to={`/details/${photo.date}`} key={photo.date}>
             <div className="card">
               <div className="card-image">
                 <img src={photo.url} alt="Placeholder Text" />
               </div>
               <div className="card-title">
                 <h3>{photo.title}</h3>
+                <p></p>
               </div>
             </div>
           </Link>

@@ -34,7 +34,7 @@ header a {
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: minmax(250px, auto);
+  grid-auto-rows: (250px, auto);
   grid-gap: 1rem;
   margin: 0 auto;
   max-width: 1200px;
@@ -42,7 +42,10 @@ header a {
 }
 
 img {
-  max-width: 80%;
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
 }
 
 .card {

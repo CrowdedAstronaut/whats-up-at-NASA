@@ -6,11 +6,12 @@ export default function PhotoDetails(props) {
   const getPhotoDetails = async () => {
     const DETAILS_SEARCH = {
       key: process.env.REACT_APP_NASA_API_KEY,
-      url: "https://api.nasa.gov/planetary/apod", //currently url is directed at local JSON data
+      url: "https://api.nasa.gov/planetary/apod/", //currently url is directed at local JSON data
       api: "&api_key=",
     };
 
-    const detailsEndPoint = `${DETAILS_SEARCH.url}${DETAILS_SEARCH.api}${DETAILS_SEARCH.key}${props.match.params.id}`; //Trying to access params of local JSON data before making real API call
+    const detailsEndPoint = `${DETAILS_SEARCH.url}?date=${props.match.params.date}${DETAILS_SEARCH.api}${DETAILS_SEARCH.key}`;
+    console.log(detailsEndPoint);
     try {
       // fetch
       const response = await fetch(detailsEndPoint);
@@ -29,6 +30,7 @@ export default function PhotoDetails(props) {
   return (
     <>
       <h3> {photo.title} </h3>
+      <p>{photo.explanation}</p>
     </>
   );
 }
