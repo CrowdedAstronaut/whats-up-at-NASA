@@ -4,6 +4,7 @@ import About from "./components/About";
 import NavHeader from "./components/NavHeader";
 import Photos from "./components/Photos";
 import PhotoDetails from "./components/PhotoDetails";
+import ReactPlayer from "react-player";
 
 function App() {
   return (
@@ -13,10 +14,11 @@ function App() {
           <a href="/">What's up at NASA?</a>
         </h1>
         <NavHeader />
+        <ReactPlayer url="" />
       </header>
       <main>
         <Route path="/" exact component={Photos} />
-        <Route path="/details/" component={PhotoDetails} />
+        <Route path="/details/:id" component={PhotoDetails} />
         <Link to="/about" component={About} />
       </main>
     </>
