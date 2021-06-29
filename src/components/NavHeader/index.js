@@ -1,7 +1,11 @@
+import { NavLink } from "react-router-dom";
+
 export default function NavHeader() {
   return (
     <div>
-      <h4>Hello from the NavHeader</h4>
+      <h4>
+        <NavLink to="/about"> About </NavLink>
+      </h4>
     </div>
   );
 }
