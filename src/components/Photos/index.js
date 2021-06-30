@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { ReactPlayer } from "react-player";
+import { ReactPlayer } from "react-player";
 
 export default function Photos() {
   const NASA_SEARCH = {
@@ -26,7 +26,7 @@ export default function Photos() {
     getPhotos();
     // eslint-disable-next-line
   }, []);
-  return (
+  return photos.length > 0 ? (
     <section className="container">
       {photos.length &&
         photos.map((photo) => {
@@ -37,10 +37,7 @@ export default function Photos() {
                   {photo.media_type === "image" ? (
                     <img src={photo.url} alt={photo.title} />
                   ) : (
-                    <img
-                      src="https://apod.nasa.gov/apod/image/1207/NGC4565crawford900.jpg"
-                      alt="This is a Galaxy on the Edge"
-                    />
+                    <ReactPlayer url={photo.url} />
                   )}
                 </div>
                 <div className="card-title">
@@ -52,9 +49,11 @@ export default function Photos() {
           );
         })}
     </section>
+  ) : (
+    <h1>loading...</h1>
   );
 }
 
 {
-  /* <ReactPlayer src={photo.url} alt={photo.title} /> */
+  /* <img src="https://apod.nasa.gov/apod/image/1210/Helix_BiColour_Finalpugh1022c.jpg" alt=This is the Helix Nebula /> */
 }
