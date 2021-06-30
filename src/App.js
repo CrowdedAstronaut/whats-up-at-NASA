@@ -4,7 +4,6 @@ import About from "./components/About";
 import NavHeader from "./components/NavHeader";
 import Photos from "./components/Photos";
 import PhotoDetails from "./components/PhotoDetails";
-import ReactPlayer from "react-player";
 
 function App() {
   return (
