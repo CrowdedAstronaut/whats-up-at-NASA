@@ -31,6 +31,10 @@ header a {
   color: white;
 }
 
+header a:hover {
+  color: red;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -55,6 +59,10 @@ img {
   border-radius: 1rem;
   display: grid;
   grid-template-rows: max-content 250px 1fr;
+}
+
+.card:hover {
+  opacity: 0.5;
 }
 
 .card-image {
