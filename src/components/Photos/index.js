@@ -6,7 +6,7 @@ export default function Photos() {
   const NASA_SEARCH = {
     key: process.env.REACT_APP_NASA_API_KEY,
     url: "https://api.nasa.gov/planetary/apod",
-    count: "?count=25",
+    count: "?count=24",
     api: "&api_key=",
   };
   const [photos, setPhotos] = useState([]);
