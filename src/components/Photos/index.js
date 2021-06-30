@@ -37,7 +37,10 @@ export default function Photos() {
                   {photo.media_type === "image" ? (
                     <img src={photo.url} alt={photo.title} />
                   ) : (
-                    <ReactPlayer url={photo.url} />
+                    <img
+                      src="https://apod.nasa.gov/apod/image/1210/Helix_BiColour_Finalpugh1022c.jpg"
+                      alt="This is the Helix Nebula"
+                    />
                   )}
                 </div>
                 <div className="card-title">
@@ -55,5 +58,6 @@ export default function Photos() {
 }
 
 {
-  /* <img src="https://apod.nasa.gov/apod/image/1210/Helix_BiColour_Finalpugh1022c.jpg" alt=This is the Helix Nebula /> */
+  /*  */
+  // <ReactPlayer url={photo.url} />
 }
