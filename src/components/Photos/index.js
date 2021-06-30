@@ -35,7 +35,7 @@ export default function Photos() {
               <div className="card">
                 <div className="card-image">
                   {photo.media_type === "image" ? (
-                    <img src={photo.url} alt="Placeholder Text" />
+                    <img src={photo.url} alt={photo.title} />
                   ) : (
                     <img
                       src="https://apod.nasa.gov/apod/image/1207/NGC4565crawford900.jpg"
@@ -53,4 +53,8 @@ export default function Photos() {
         })}
     </section>
   );
+}
+
+{
+  /* <ReactPlayer src={photo.url} alt={photo.title} /> */
 }
