@@ -24,6 +24,7 @@ export default function Photos() {
 
   useEffect(() => {
     getPhotos();
+    // eslint-disable-next-line
   }, []);
   return (
     <section className="container">

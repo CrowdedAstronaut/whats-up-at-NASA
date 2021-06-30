@@ -24,14 +24,23 @@ export default function PhotoDetails(props) {
   };
   useEffect(() => {
     getPhotoDetails();
+    // eslint-disable-next-line
   }, []);
 
   console.log(photo);
   return (
-    <>
-      <h3> {photo.title} </h3>
-      <p>{photo.explanation}</p>
-    </>
+    <div className="details-container">
+      <img src={photo.url} alt={photo.title} />
+      <div className="details">
+        <h2>{photo.title}</h2>
+        <h3>{photo.copyright}</h3>
+        <h4>{photo.date}</h4>
+        <p>{photo.explanation}</p>
+        <a href={photo.hdurl} target="_blank" rel="noopener noreferrer">
+          Click to see the HD photo...
+        </a>
+      </div>
+    </div>
   );
 }
 
