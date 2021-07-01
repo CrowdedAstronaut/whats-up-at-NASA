@@ -1,6 +1,7 @@
 # Description:
 
-This is a React Application that queries the NASA Photo of the Day API and returns 25 results to the user. If the user clicks on a photo, the app will return details about that photo from the NASA API. (ADD A SCREENSHOT OF THE FINISHED PRODUCT)
+This is a React Application that queries the NASA Photo of the Day API and returns 25 results to the user. If the user clicks on a photo, the app will return details about that photo from the NASA API. ![Screen Shot 2021-07-01 at 8 38 32 AM](https://user-images.githubusercontent.com/65795477/124133880-e4238b80-da47-11eb-8ab1-27f1b900a74e.png)
+
 
 # Technologies Used:
 
