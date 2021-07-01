@@ -20,7 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
-  background-image: url("../../whats-up-at-NASA/src/data/space-background.jpeg");
+  background-image: url("./images/space-background.jpeg");
 }
 
 h1 {
