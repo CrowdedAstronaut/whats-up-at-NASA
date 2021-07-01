@@ -6,7 +6,7 @@ export default function PhotoDetails(props) {
   const getPhotoDetails = async () => {
     const DETAILS_SEARCH = {
       key: process.env.REACT_APP_NASA_API_KEY,
-      url: "https://api.nasa.gov/planetary/apod/", //currently url is directed at local JSON data
+      url: "https://api.nasa.gov/planetary/apod/",
       api: "&api_key=",
     };
 

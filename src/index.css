@@ -6,17 +6,25 @@
 
 a {
   text-decoration: none;
+  color: red;
+}
+
+a:hover {
+  color: green;
 }
 
 body {
-  margin: 0;
   font-family: "Strait", sans-serif;
+  color: white;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
+  background-image: url("../../whats-up-at-NASA/src/data/space-background.jpeg");
 }
 
 h1 {
+  text-align: center;
   font-weight: 300;
   margin: 0;
 }
@@ -29,10 +37,6 @@ header {
 
 header a {
   color: white;
-}
-
-header a:hover {
-  color: red;
 }
 
 .container {
@@ -85,6 +89,7 @@ img {
 }
 
 .details-container {
+  color: white;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -108,7 +113,6 @@ img {
 }
 
 .details h3 {
-  font-family: "Strait", sans-serif;
   font-style: italic;
   font-weight: 200;
   margin-top: 0;

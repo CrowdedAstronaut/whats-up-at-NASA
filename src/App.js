@@ -13,7 +13,6 @@ function App() {
           <a href="/">What's up at NASA?</a>
         </h1>
         <NavHeader />
-        {/* <ReactPlayer url="" /> */}
       </header>
       <main>
         <Route path="/" exact component={Photos} />
