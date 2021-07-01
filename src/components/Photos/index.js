@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ReactPlayer } from "react-player";
+import background from "../../images/space-background.jpeg";
 
 export default function Photos() {
   const NASA_SEARCH = {
