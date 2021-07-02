@@ -21,6 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
   background-image: url("./images/space-background.jpeg");
+  object-fit: cover;
 }
 
 h1 {
@@ -124,12 +125,4 @@ img {
 
 .details p {
   margin: 0;
-}
-
-.read-more {
-  background-color: black;
-  color: white;
-  display: inline-block;
-  margin: 1rem 0;
-  padding: 1rem;
 }
