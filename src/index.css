@@ -20,8 +20,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
-  background-image: url("./images/space-background.jpeg");
-  object-fit: cover;
+  background: url("./images/space-background.jpeg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 h1 {
@@ -29,11 +33,13 @@ h1 {
   font-weight: 300;
   margin: 0;
 }
+h2 {
+  text-align: center;
+}
 
 header {
   background-color: black;
   color: white;
-  padding: 1rem;
 }
 
 header a {
@@ -42,7 +48,10 @@ header a {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  );
   /* grid-auto-rows: 1fr; */
   grid-gap: 1rem;
   margin: 0 auto;
@@ -50,6 +59,9 @@ header a {
   padding: 1rem;
 }
 
+p {
+  text-align: center;
+}
 img {
   object-fit: cover;
   width: 100%;
