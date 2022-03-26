@@ -3,130 +3,78 @@
 This is a React Application that queries the NASA Photo of the Day API and returns 25 results to the user. If the user clicks on a photo, the app will return details about that photo from the NASA API. ![Screen Shot 2021-07-02 at 7 50 09 AM](https://user-images.githubusercontent.com/65795477/124277038-36c57c00-db0a-11eb-8442-4eb2110cd524.png)
 
 
-# Technologies Used:
 
-This application was built using HTML5, CSS3, JS ES6, AJAX, and REACT
+# Table of Contents
 
-# Contribution Guidelines:
+- [About this project](#about)
+- [Workflow](#workflow)
+- [Technologies](#technologies)
+- [Links](#links)
+- [Installation](#install)
+- [APIs](#apis)
 
-Contributing to whats-up-at-NASA
-We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
+<hr />
+<br />
+[Home_Mobile](https://user-images.githubusercontent.com/65795477/125976547-f39ebe7f-00e5-4988-b107-ff53a5ca906f.jpeg)
 
-Reporting a bug
-Discussing the current state of the code
-Submitting a fix
-Proposing new features
-Becoming a maintainer
-We Develop with Github
-We use github to host code, to track issues and feature requests, as well as accept pull requests.
+## Project Description
 
-We Use Github Flow, So All Code Changes Happen Through Pull Requests
-Pull requests are the best way to propose changes to the codebase (we use Github Flow). We actively welcome your pull requests:
+devOgraphy is a working, interactive, full-stack application that receives data from a custom API that we designed. The app allows users to learn more about programming languages, their icons, their authors, and their creation date.
 
-Fork the repo and create your branch from master.
-If you've added code that should be tested, add tests.
-If you've changed APIs, update the documentation.
-Ensure the test suite passes.
-Make sure your code lints.
-Issue that pull request!
-Any contributions you make will be under the MIT Software License
-In short, when you submit code changes, your submissions are understood to be under the same MIT License that covers the project. Feel free to contact the maintainers if that's a concern.
+Link To Site: https://devography.netlify.app/
 
-Report bugs using Github's issues
-We use GitHub issues to track public bugs. Report a bug by opening a new issue; it's that easy!
 
-Write bug reports with detail, background, and sample code
-This is an example of a bug report I wrote, and I think it's not a bad model. Here's another example from Craig Hockenberry, an app developer whom I greatly respect.
+## User Stories (MVP/CRUD)
 
-Great Bug Reports tend to have:
+- As a user of devOgraphy, I want to be able to view the top programming language and view the properties of each language so I can have all the information in a centralized location.
+- As a user of devOgraphy, I want to be able to create comments about programming language to be add to the database so that I can interact with the app.
+- As a user of devOgraphy, I want to be able to see my created post so that I know my post is saved.
+- As a user of devOgraphy, I want to be able to update a post incase I make a mistake.
+- As a user of devOgraphy, I want to be able to delete my post so that I can remove any unwanted post.
 
-A quick summary and/or background
-Steps to reproduce
-Be specific!
-Give sample code if you can. My stackoverflow question includes sample code that anyone with a base R setup can run to reproduce what I was seeing
-What you expected would happen
-What actually happens
-Notes (possibly including why you think this might be happening, or stuff you tried that didn't work)
-People love thorough bug reports. I'm not even kidding.
+## Workflow
+Our team used Agile workflow for this sprint.
 
-Use a Consistent Coding Style
-I'm again borrowing these from Facebook's Guidelines
+ 
 
-2 spaces for indentation rather than tabs
-You can try running npm run lint for style unification
-License
-By contributing, you agree that your contributions will be licensed under its MIT License.
+# Version Control
+We implemented Git Feature Branch Workflow. All pull requests in Github were reviewed by another team member before being merged into the main branch.
+## Learning Experience
 
-References
-This document was adapted from the open-source contribution guidelines for Facebook's Draft
+Cut problems into smaller pieces and console.log any unknown data. This was our first project as a team and so we relied heavily upon each other to debug our own problems. We learned a lot about communication, division of labor, project management, and how to utilize each of our individual strengths. Read documentation!!! Most of the answers are available if you know where and how to search.
 
-# Getting Started with Create React App
+## Setting Up Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+One of the key feature of React is the composition of the functional components. Components are reuseable functions in React, and in order to efficiently build our app, we had to carefully decide on a uniform set of data and plan who would work on which components. Before diving into the creating the app, it was important to understand the components hierarchy.
 
-## Available Scripts
+## Building the Core Structure
 
-In the project directory, you can run:
+React Components
+The Component Hierarchy diagram, above, represents of how the components are structured in our app. In devOgraphy, there are 8 components. Each being a child of the 'App' components, except for the NavHeader and the Footer component.
 
-### `yarn start`
+In this case, all of the event listeners and the main API calls were done in the 'App.js' file and that data is passed down to Languages and then Language.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Dynamic API Calls
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+By creating our own API, devOgraphy is able to make dynamic request. For this app, the programming languages endpoint was used. So different props variables were created to make multiple calls.
 
-### `yarn test`
+## User Experience - Responsive design.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Creating a responsive App. devOgraphy uses React bootstap paired with Flexbox and media queries in order to make it responsive across mobile, tablet, and desktop widths.
 
-### `yarn build`
+## Future Directions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+User Stories (Stretch Goals)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- As a user of Devography, I want a search feature that allows me to search either programing languages or paradigm and get a result of different usage. (edited)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Accomplishments
 
-### `yarn eject`
+This application uses a Node, Express, and Mongoose API. There is Create, Read, Update, and Destroy functionality built throughout the app. The front-end uses React and leverages the backend API RESTfully to Create, Read, Update, and Destroy resources. This app uses CSS Grid and Flexbox along with media queries to make your app responsive across mobile, tablet, and desktop widths.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+yarn install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
